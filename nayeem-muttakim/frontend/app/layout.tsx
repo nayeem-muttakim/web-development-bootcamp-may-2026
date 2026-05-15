@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from "@/components/ui/navbar";
 
 export const metadata: Metadata = {
   title: "FileHarbor",
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full bg-[#0F1117] flex flex-col">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
